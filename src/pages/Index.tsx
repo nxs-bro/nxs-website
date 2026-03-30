@@ -114,13 +114,13 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center justify-center gap-2"
               >
                 Let's Build Your Brand <ArrowRight size={18} />
               </Link>
               <Link
                 to="/contact"
-                className="border border-border text-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-secondary transition-colors inline-flex items-center justify-center"
+                className="border border-border text-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-secondary transition-all duration-300 inline-flex items-center justify-center"
               >
                 Get Free Audit
               </Link>
@@ -128,7 +128,7 @@ const Index = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 mt-24 pt-12 border-t border-border max-w-2xl">
+          <div className="grid grid-cols-3 gap-6 mt-24 pt-12 border-t border-white/[0.08] max-w-2xl">
             {stats.map((s) => (
               <div key={s.label}>
                 <div className="font-display text-3xl sm:text-4xl font-bold text-primary">{s.value}</div>
@@ -147,8 +147,8 @@ const Index = () => {
         <SectionTitle>Sound familiar?</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
           {painPoints.map((p) => (
-            <div key={p.text} className="bg-background rounded-xl p-8 border border-border shadow-lg shadow-black/20">
-              <p.icon className="text-primary mb-5" size={28} />
+            <div key={p.text} className="glass-card p-8">
+              <p.icon className="text-primary mb-5 transition-transform duration-300 group-hover:scale-110" size={28} />
               <p className="text-foreground text-lg font-medium leading-relaxed">{p.text}</p>
             </div>
           ))}
@@ -164,10 +164,10 @@ const Index = () => {
         <SectionTitle>We don't sell services. We install a <span className="text-primary">growth system</span>.</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
           {systemSteps.map((step) => (
-            <div key={step.num} className="bg-card rounded-xl p-8 border border-border group hover:border-primary/50 transition-colors shadow-lg shadow-black/20">
+            <div key={step.num} className="glass-card p-8 group">
               <span className="text-primary font-display text-sm font-bold">{step.num}</span>
-              <step.icon className="text-muted-foreground mt-5 mb-4 group-hover:text-primary transition-colors" size={24} />
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">{step.title}</h3>
+              <step.icon className="text-muted-foreground mt-5 mb-4 group-hover:text-primary transition-colors duration-300" size={24} />
+              <h3 className="font-display text-xl font-bold text-foreground mb-3 transition-colors duration-300">{step.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
             </div>
           ))}
@@ -182,8 +182,8 @@ const Index = () => {
         <SectionTitle>Three ways to grow with NXS Media</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-14">
           {services.map((s) => (
-            <div key={s.title} className="bg-background rounded-xl p-8 border border-border flex flex-col shadow-lg shadow-black/20">
-              <h3 className="font-display text-xl font-bold text-foreground mb-4">{s.title}</h3>
+            <div key={s.title} className="glass-card p-8 flex flex-col group">
+              <h3 className="font-display text-xl font-bold text-foreground mb-4 transition-colors duration-300">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-8">{s.desc}</p>
               <div className="mt-auto space-y-3">
                 {s.outcomes.map((o) => (
@@ -197,7 +197,7 @@ const Index = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link to="/services" className="text-primary font-semibold inline-flex items-center gap-2 hover:underline">
+          <Link to="/services" className="text-primary font-semibold inline-flex items-center gap-2 hover:underline transition-all duration-300">
             View All Services <ArrowRight size={16} />
           </Link>
         </div>
@@ -215,10 +215,10 @@ const Index = () => {
             <Link
               to="/case-studies"
               key={cs.name}
-              className="bg-card rounded-xl p-8 border border-border hover:border-primary/50 transition-colors group shadow-lg shadow-black/20"
+              className="glass-card p-8 group block"
             >
               <span className="text-xs text-primary font-semibold uppercase tracking-wider">{cs.niche}</span>
-              <h3 className="font-display text-xl font-bold text-foreground mt-3 mb-2">{cs.name}</h3>
+              <h3 className="font-display text-xl font-bold text-foreground mt-3 mb-2 transition-colors duration-300">{cs.name}</h3>
               <p className="text-muted-foreground text-sm mb-4">{cs.desc}</p>
               <div className="font-display text-2xl font-bold text-primary">{cs.result}</div>
               <div className="text-xs text-muted-foreground mt-1">{cs.detail}</div>
@@ -235,7 +235,7 @@ const Index = () => {
         <SectionTitle className="mx-auto">Brands & individuals who trust us</SectionTitle>
         <div className="flex flex-wrap justify-center gap-6 mt-14">
           {trustedBrands.map((brand) => (
-            <div key={brand} className="bg-background rounded-lg px-8 py-4 border border-border text-muted-foreground font-display font-semibold tracking-wider text-sm">
+            <div key={brand} className="glass-card px-8 py-4 text-muted-foreground font-display font-semibold tracking-wider text-sm">
               {brand}
             </div>
           ))}
@@ -266,7 +266,7 @@ const Index = () => {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="rounded-xl p-10 border border-black/8 shadow-sm"
+                className="rounded-xl p-10 border border-black/8 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-md"
                 style={{ backgroundColor: "hsl(0 0% 100%)" }}
               >
                 <Quote className="text-primary mb-5" size={28} />
@@ -289,9 +289,9 @@ const Index = () => {
         <SectionTitle>Because growth without direction is just noise.</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
           {whyUs.map((w) => (
-            <div key={w.title} className="bg-card rounded-xl p-8 border border-border shadow-lg shadow-black/20">
-              <w.icon className="text-primary mb-5" size={28} />
-              <h3 className="font-display text-lg font-bold text-foreground mb-3">{w.title}</h3>
+            <div key={w.title} className="glass-card p-8 group">
+              <w.icon className="text-primary mb-5 transition-transform duration-300 group-hover:scale-110" size={28} />
+              <h3 className="font-display text-lg font-bold text-foreground mb-3 transition-colors duration-300">{w.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{w.desc}</p>
             </div>
           ))}
@@ -312,7 +312,7 @@ const Index = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2"
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center justify-center gap-2"
           >
             Book a Call <ArrowRight size={18} />
           </Link>
@@ -320,7 +320,7 @@ const Index = () => {
             href="https://wa.me/916001745159?text=Hi%20NXS%20Media%2C%20I%27m%20interested%20in%20your%20services"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-border text-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-background transition-colors inline-flex items-center justify-center"
+            className="border border-white/[0.08] text-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-secondary transition-all duration-300 inline-flex items-center justify-center"
           >
             WhatsApp Us
           </a>

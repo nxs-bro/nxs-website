@@ -46,10 +46,10 @@ const Work = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeCategory === cat
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-muted-foreground hover:text-foreground"
+                  : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-white/[0.06]"
               }`}
             >
               {cat}
@@ -63,7 +63,7 @@ const Work = () => {
             <button
               key={i}
               onClick={() => setActiveVideo(item.videoId)}
-              className="group bg-secondary rounded-xl border border-border overflow-hidden text-left hover:border-primary/50 transition-colors"
+              className="group glass-card overflow-hidden text-left"
             >
               <div className="aspect-video bg-muted relative flex items-center justify-center">
                 <img
@@ -72,15 +72,15 @@ const Work = () => {
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-background/60 flex items-center justify-center group-hover:bg-background/40 transition-colors">
-                  <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="absolute inset-0 bg-background/60 flex items-center justify-center group-hover:bg-background/40 transition-colors duration-300">
+                  <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Play size={24} className="text-primary-foreground ml-1" />
                   </div>
                 </div>
               </div>
               <div className="p-5">
                 <span className="text-primary text-xs font-semibold uppercase tracking-wider">{item.niche}</span>
-                <h3 className="font-display font-bold text-foreground mt-1">{item.title}</h3>
+                <h3 className="font-display font-bold text-foreground mt-1 transition-colors duration-300">{item.title}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{item.result}</p>
               </div>
             </button>
@@ -91,13 +91,13 @@ const Work = () => {
       {/* Video Modal */}
       {activeVideo && (
         <div
-          className="fixed inset-0 z-[60] bg-background/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[60] glass-overlay flex items-center justify-center p-4"
           onClick={() => setActiveVideo(null)}
         >
-          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-4xl glass-modal" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setActiveVideo(null)}
-              className="absolute -top-12 right-0 text-foreground hover:text-primary transition-colors"
+              className="absolute -top-12 right-0 text-foreground hover:text-primary transition-colors duration-300"
             >
               <X size={28} />
             </button>
