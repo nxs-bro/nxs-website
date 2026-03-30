@@ -231,12 +231,10 @@ const Index = () => {
         </div>
       </Section>
 
-      <div className="section-gap" />
-
       {/* TESTIMONIALS — LIGHT SECTION for contrast break */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 bg-light-section">
         <div className="container-narrow">
-          <SectionLabel>Testimonials</SectionLabel>
+          <span className="text-primary text-sm font-semibold uppercase tracking-widest mb-4 block">Testimonials</span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-light-section-foreground leading-tight">
             What our clients say
           </h2>
@@ -244,7 +242,8 @@ const Index = () => {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="bg-white rounded-xl p-10 border border-black/5 shadow-md"
+                className="rounded-xl p-10 border border-black/8 shadow-sm"
+                style={{ backgroundColor: "hsl(0 0% 100%)" }}
               >
                 <Quote className="text-primary mb-5" size={28} />
                 <p className="text-light-section-foreground text-lg leading-relaxed mb-8 italic">
@@ -260,7 +259,6 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="section-gap" />
 
       {/* WHY CHOOSE US — base background (darker) */}
       <Section className="bg-background">

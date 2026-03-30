@@ -47,9 +47,9 @@
 
     --surface-elevated: 0 0% 11%;
     --surface-sunken: 0 0% 3%;
-    --light-section: 30 10% 96%;
-    --light-section-foreground: 0 0% 6%;
-    --light-section-muted: 0 0% 40%;
+    --light-section: 0 0% 96%;
+    --light-section-foreground: 0 0% 8%;
+    --light-section-muted: 0 0% 45%;
   }
 }
 
