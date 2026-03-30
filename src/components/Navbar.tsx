@@ -19,7 +19,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container-narrow section-padding !py-0 flex items-center justify-between h-16 sm:h-20">
-        <Link to="/" className="font-display text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-2 font-display text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+          <img src={nxsLogo} alt="NXS Media" className="h-8 sm:h-10 w-auto invert" />
           NXS <span className="text-primary">MEDIA</span>
         </Link>
 
