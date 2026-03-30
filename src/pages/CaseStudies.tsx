@@ -84,7 +84,7 @@ const CaseStudies = () => {
         <Section key={cs.name} className={i % 2 === 0 ? "bg-secondary" : ""}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Header */}
-            <div className="lg:col-span-3 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-8 border-b border-border">
+            <div className="lg:col-span-3 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-8 border-b border-white/[0.08]">
               <div>
                 <span className="text-primary text-sm font-semibold uppercase tracking-widest">{cs.niche}</span>
                 <h3 className="font-display text-3xl sm:text-4xl font-bold text-foreground mt-2">{cs.name}</h3>
@@ -113,7 +113,7 @@ const CaseStudies = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">{cs.execution}</p>
             </div>
 
-            <div className="bg-background rounded-xl p-6 border border-border">
+            <div className="glass-card p-6">
               <h4 className="font-display font-semibold text-foreground mb-4">Results</h4>
               <div className="space-y-3">
                 {cs.results.map((r) => (
@@ -138,7 +138,7 @@ const CaseStudies = () => {
         </p>
         <Link
           to="/contact"
-          className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2 mt-8"
+          className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center gap-2 mt-8"
         >
           Book a Strategy Call <ArrowRight size={18} />
         </Link>

@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-2xl border-b border-white/[0.06]">
       <div className="container-narrow section-padding !py-0 flex items-center justify-between h-16 sm:h-20">
         <Link to="/" className="flex items-center gap-2 font-display text-xl sm:text-2xl font-bold tracking-tight text-foreground">
           <img src={nxsLogo} alt="NXS Media" className="h-6 sm:h-7 w-auto brightness-0 invert" />
@@ -39,7 +39,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
+            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold cta-glow"
           >
             Book a Call
           </Link>

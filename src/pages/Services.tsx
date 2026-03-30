@@ -77,7 +77,7 @@ const Services = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-background rounded-xl p-8 border border-border">
+            <div className="glass-card p-8">
               <h4 className="font-display font-semibold text-foreground mb-6">Expected Outcomes</h4>
               <div className="space-y-4">
                 {s.outcomes.map((o) => (
@@ -89,7 +89,7 @@ const Services = () => {
               </div>
               <Link
                 to="/contact"
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2 mt-8"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold cta-glow inline-flex items-center gap-2 mt-8"
               >
                 Get Started <ArrowRight size={16} />
               </Link>
@@ -108,7 +108,7 @@ const Services = () => {
         </p>
         <Link
           to="/contact"
-          className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2 mt-8"
+          className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center gap-2 mt-8"
         >
           Book a Free Call <ArrowRight size={18} />
         </Link>

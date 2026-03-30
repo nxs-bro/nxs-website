@@ -29,9 +29,7 @@ const Contact = () => {
 
     setSending(true);
 
-    // EmailJS integration placeholder — replace with your actual service/template/user IDs
     try {
-      // For now, simulate sending
       await new Promise((r) => setTimeout(r, 1000));
       toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
       setForm({ name: "", businessType: "", revenue: "", challenge: "", budget: "", email: "" });
@@ -62,7 +60,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-display font-semibold text-foreground mb-2">Phone</h4>
-                <a href="tel:+916001745159" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+916001745159" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                   +91 6001745159
                 </a>
               </div>
@@ -70,7 +68,7 @@ const Contact = () => {
                 href="https://wa.me/916001745159?text=Hi%20NXS%20Media%2C%20I%27m%20interested%20in%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-secondary border border-border text-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:border-primary/50 transition-colors inline-flex items-center gap-2"
+                className="glass-card px-6 py-3 text-foreground text-sm font-semibold inline-flex items-center gap-2"
               >
                 <MessageCircle size={18} /> Chat on WhatsApp
               </a>
@@ -78,7 +76,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-secondary rounded-xl p-8 border border-border space-y-5">
+          <form onSubmit={handleSubmit} className="glass-card p-8 space-y-5">
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Name *</label>
               <input
@@ -86,7 +84,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your full name"
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
                 required
                 maxLength={100}
               />
@@ -99,7 +97,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="you@company.com"
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
                 required
                 maxLength={255}
               />
@@ -110,7 +108,7 @@ const Contact = () => {
                 name="businessType"
                 value={form.businessType}
                 onChange={handleChange}
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
               >
                 <option value="">Select...</option>
                 <option value="personal-brand">Personal Brand</option>
@@ -127,7 +125,7 @@ const Contact = () => {
                 name="revenue"
                 value={form.revenue}
                 onChange={handleChange}
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
               >
                 <option value="">Select...</option>
                 <option value="0-10k">₹0 – ₹10K</option>
@@ -145,7 +143,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="What's your biggest challenge with content / growth right now?"
                 rows={4}
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none transition-colors duration-300"
                 required
                 maxLength={1000}
               />
@@ -156,7 +154,7 @@ const Contact = () => {
                 name="budget"
                 value={form.budget}
                 onChange={handleChange}
-                className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
               >
                 <option value="">Select...</option>
                 <option value="under-10k">Under ₹10K/month</option>
@@ -168,7 +166,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={sending}
-              className="w-full bg-primary text-primary-foreground py-3.5 rounded-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full bg-primary text-primary-foreground py-3.5 rounded-lg font-semibold cta-glow inline-flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {sending ? "Sending..." : <>Send Inquiry <Send size={16} /></>}
             </button>
