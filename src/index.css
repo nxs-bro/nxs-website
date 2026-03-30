@@ -44,6 +44,12 @@
     --sidebar-accent-foreground: 0 0% 90%;
     --sidebar-border: 0 0% 18%;
     --sidebar-ring: 18 100% 55%;
+
+    --surface-elevated: 0 0% 8%;
+    --surface-sunken: 0 0% 6%;
+    --light-section: 30 10% 95%;
+    --light-section-foreground: 0 0% 8%;
+    --light-section-muted: 0 0% 40%;
   }
 }
 
@@ -66,10 +72,13 @@
     background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 70%));
   }
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28;
+    @apply px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36;
   }
   .container-narrow {
     @apply max-w-6xl mx-auto;
+  }
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-border to-transparent;
   }
 }
 

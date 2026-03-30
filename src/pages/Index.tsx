@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
-import { ArrowRight, Target, Video, BarChart3, Zap, TrendingUp, Users, Eye, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Target, Video, BarChart3, Zap, TrendingUp, Users, Eye, AlertTriangle, CheckCircle2, Quote } from "lucide-react";
 
 const stats = [
   { value: "200M+", label: "Views Generated" },
@@ -60,6 +60,19 @@ const caseStudies = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Vinod Krishna",
+    role: "Fitness Creator",
+    quote: "NXS Media transformed my social media presence. From inconsistent posting to a fully managed growth system — the results speak for themselves.",
+  },
+  {
+    name: "Prateek Talukdar",
+    role: "IFBB Pro Athlete",
+    quote: "They understood my niche and built a content strategy that actually converts followers into clients. Highly recommend.",
+  },
+];
+
 const whyUs = [
   { icon: Target, title: "Strategy-First Approach", desc: "Every piece of content is backed by a clear growth strategy." },
   { icon: TrendingUp, title: "Real Growth, Not Vanity", desc: "We focus on leads and revenue, not just likes and followers." },
@@ -69,8 +82,8 @@ const whyUs = [
 const Index = () => {
   return (
     <div>
-      {/* HERO */}
-      <section className="min-h-screen flex items-center pt-20">
+      {/* HERO — deepest black bg */}
+      <section className="min-h-screen flex items-center pt-20 bg-background">
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <SectionLabel>Content Growth Agency</SectionLabel>
@@ -110,8 +123,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PROBLEM */}
-      <Section className="bg-secondary">
+      <div className="section-divider" />
+
+      {/* PROBLEM — elevated surface */}
+      <Section className="bg-surface-elevated">
         <SectionLabel>The Problem</SectionLabel>
         <SectionTitle>Sound familiar?</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -124,8 +139,10 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* SOLUTION / SYSTEM */}
-      <Section>
+      <div className="section-divider" />
+
+      {/* SOLUTION / SYSTEM — base background */}
+      <Section className="bg-background">
         <SectionLabel>The Solution</SectionLabel>
         <SectionTitle>We don't sell services. We install a <span className="text-primary">growth system</span>.</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -140,8 +157,10 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* SERVICES */}
-      <Section className="bg-secondary">
+      <div className="section-divider" />
+
+      {/* SERVICES — elevated surface */}
+      <Section className="bg-surface-elevated">
         <SectionLabel>What We Offer</SectionLabel>
         <SectionTitle>Three ways to grow with NXS Media</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
@@ -167,8 +186,10 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* CASE STUDIES PREVIEW */}
-      <Section>
+      <div className="section-divider" />
+
+      {/* CASE STUDIES — base background */}
+      <Section className="bg-background">
         <SectionLabel>Results</SectionLabel>
         <SectionTitle>Real clients. Real growth.</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -187,8 +208,10 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* PROOF */}
-      <Section className="bg-secondary text-center">
+      <div className="section-divider" />
+
+      {/* PROOF — elevated surface */}
+      <Section className="bg-surface-elevated text-center">
         <SectionLabel>Proof</SectionLabel>
         <SectionTitle className="mx-auto">Numbers don't lie.</SectionTitle>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 max-w-3xl mx-auto">
@@ -206,8 +229,39 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* WHY CHOOSE US */}
-      <Section>
+      <div className="section-divider" />
+
+      {/* TESTIMONIALS — LIGHT SECTION for contrast break */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 bg-light-section">
+        <div className="container-narrow">
+          <SectionLabel>Testimonials</SectionLabel>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-light-section-foreground leading-tight">
+            What our clients say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {testimonials.map((t) => (
+              <div
+                key={t.name}
+                className="bg-white rounded-xl p-8 border border-black/5 shadow-sm"
+              >
+                <Quote className="text-primary mb-4" size={28} />
+                <p className="text-light-section-foreground text-lg leading-relaxed mb-6 italic">
+                  "{t.quote}"
+                </p>
+                <div>
+                  <div className="font-display font-bold text-light-section-foreground">{t.name}</div>
+                  <div className="text-light-section-muted text-sm">{t.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* WHY CHOOSE US — base background */}
+      <Section className="bg-background">
         <SectionLabel>Why NXS Media</SectionLabel>
         <SectionTitle>Why founders choose us</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -221,8 +275,10 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* FINAL CTA */}
-      <Section className="bg-secondary text-center">
+      <div className="section-divider" />
+
+      {/* FINAL CTA — elevated surface */}
+      <Section className="bg-surface-elevated text-center">
         <SectionTitle className="mx-auto max-w-2xl">
           Let's build your <span className="text-primary">growth system</span>.
         </SectionTitle>
