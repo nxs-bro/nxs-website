@@ -88,7 +88,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <ShaderAnimation />
         </div>
-        <div className="absolute inset-0 z-[1] bg-background/50" />
+        <div className="absolute inset-0 z-[1] bg-background/5" />
         <div className="container-narrow px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <SectionLabel>Content Growth Agency</SectionLabel>
