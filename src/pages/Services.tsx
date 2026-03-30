@@ -4,43 +4,43 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Content Growth System",
-    subtitle: "For founders who want a predictable content engine",
-    desc: "We build a full content system — from strategy to production to distribution — that generates leads and builds authority on autopilot.",
+    title: "Social Media Content Production & Strategy",
+    subtitle: "For founders who want to be positioned as experts",
+    desc: "Clear roadmap for consistent growth. AI-powered content production, engaging video editing, and graphic design — all designed to position you as an authority and turn attention into leads and opportunities.",
     features: [
       "Custom growth strategy & content roadmap",
       "AI-powered content ideation & scripting",
-      "Professional video editing & graphic design",
+      "Professional video editing & post-production",
+      "Graphic design for social media",
+      "Authority positioning & expert branding",
+      "Content that attracts the right audience",
+    ],
+    outcomes: ["Positioned as industry authority", "Content pipeline that generates leads", "200M+ views generated across client accounts"],
+  },
+  {
+    title: "Organic Growth & Scaling",
+    subtitle: "For business owners ready to scale organically",
+    desc: "Helping business owners scale through high-performing organic content. We create content that converts followers into clients and drives real business results — no paid ads required.",
+    features: [
+      "High-performing organic content strategy",
       "Multi-platform distribution (IG, YT, LinkedIn, X)",
+      "Audience research & targeting",
+      "Engagement loops & community building",
       "Weekly performance analytics & optimization",
       "Direct access to your growth strategist",
     ],
-    outcomes: ["Predictable lead flow from content", "Positioned as industry authority", "Consistent growth month over month"],
+    outcomes: ["Predictable organic growth", "Real leads, not vanity metrics", "Scalable content system"],
   },
   {
-    title: "Paid Ads & Scaling",
-    subtitle: "For brands ready to scale what's already working",
-    desc: "We take your best-performing organic content and amplify it with targeted paid campaigns that drive qualified leads at scale.",
-    features: [
-      "Ad creative strategy & production",
-      "Campaign setup & management (Meta, YouTube, Google)",
-      "Audience research & targeting",
-      "Landing page optimization",
-      "A/B testing & creative iteration",
-      "Monthly reporting & scaling recommendations",
-    ],
-    outcomes: ["Lower cost per acquisition", "Scalable paid growth system", "Higher ROI on ad spend"],
-  },
-  {
-    title: "Full Content Management",
+    title: "Full Social Media & Production Management",
     subtitle: "For busy founders who want it all handled",
-    desc: "End-to-end social media management — we handle everything so you can focus entirely on running your business.",
+    desc: "End-to-end social media and production management — we handle everything so you can focus entirely on running your business.",
     features: [
-      "Everything in Content Growth System",
+      "Everything in Content Production & Strategy",
+      "Full social media management",
       "Community management & engagement",
       "Content calendar planning & approval",
       "Brand voice development",
-      "Crisis management & reputation monitoring",
       "Monthly strategy reviews & pivots",
     ],
     outcomes: ["Zero content stress", "Professional brand presence 24/7", "More time for business growth"],
@@ -53,9 +53,9 @@ const Services = () => {
       {/* Hero */}
       <Section>
         <SectionLabel>Our Services</SectionLabel>
-        <SectionTitle>We don't just post content.<br />We build <span className="text-primary">growth systems</span>.</SectionTitle>
+        <SectionTitle>We don't just grow pages.<br />We <span className="text-primary">build brands</span>.</SectionTitle>
         <p className="text-muted-foreground text-lg mt-6 max-w-2xl leading-relaxed">
-          Three proven packages designed to turn your social media into a client acquisition machine.
+          Anyone can post content. Very few can build authority. We combine strategy, creativity, and execution to turn your social media into a growth engine.
         </p>
       </Section>
 
