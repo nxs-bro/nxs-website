@@ -10,32 +10,31 @@ const stats = [
 ];
 
 const painPoints = [
-  { icon: AlertTriangle, text: "Posting consistently but getting zero results" },
-  { icon: Eye, text: "Getting views but no leads or revenue" },
-  { icon: Target, text: "No clear content strategy or direction" },
+  { icon: AlertTriangle, text: "Posting content without direction — no strategy, no consistency" },
+  { icon: Eye, text: "Getting views but no leads, no revenue, no growth" },
+  { icon: Target, text: "Missing out on opportunities because your brand isn't positioned right" },
 ];
 
 const systemSteps = [
-  { num: "01", title: "Strategy", desc: "We audit your brand and build a custom growth roadmap.", icon: Target },
-  { num: "02", title: "Content Production", desc: "AI-powered content creation with engaging video editing.", icon: Video },
-  { num: "03", title: "Distribution", desc: "Multi-platform distribution for maximum reach.", icon: BarChart3 },
-  { num: "04", title: "Conversion", desc: "Turn attention into leads and paying clients.", icon: Zap },
+  { num: "01", title: "Content Production & Strategy", desc: "Clear roadmap for consistent growth. AI-powered content production, engaging video editing, and graphic design.", icon: Target },
+  { num: "02", title: "Organic Growth", desc: "Helping business owners scale through high-performing organic content that attracts the right audience.", icon: Video },
+  { num: "03", title: "Social Media Management", desc: "End-to-end handling of your social media and production so you focus on your business.", icon: BarChart3 },
 ];
 
 const services = [
   {
-    title: "Content Growth System",
-    desc: "A complete system that turns your social media into a lead generation machine. Strategy, content, distribution — all handled.",
-    outcomes: ["Predictable content pipeline", "Authority positioning", "Lead generation from content"],
+    title: "Social Media Content Production & Strategy",
+    desc: "A complete system — clear growth roadmap, AI-powered content production, engaging video editing, and graphic design. We position you as an expert and turn attention into leads.",
+    outcomes: ["Authority positioning", "Content that attracts the right audience", "200M+ views generated across client accounts"],
   },
   {
-    title: "Paid Ads & Scaling",
-    desc: "High-performing ad campaigns that scale your best content and drive qualified leads directly to your business.",
-    outcomes: ["Lower cost per lead", "Scalable ad systems", "Data-driven optimization"],
+    title: "Organic Growth & Scaling",
+    desc: "Helping business owners scale through high-performing organic content. We create content that converts followers into clients and opportunities.",
+    outcomes: ["Predictable content pipeline", "Real growth, not vanity metrics", "Lead generation from content"],
   },
   {
-    title: "Full Content Management",
-    desc: "End-to-end content management so you can focus on your business while we handle everything else.",
+    title: "Full Social Media & Production Management",
+    desc: "End-to-end social media and production management so you can focus on your business while we handle everything else.",
     outcomes: ["Zero content stress", "Consistent posting schedule", "Professional brand presence"],
   },
 ];
@@ -46,18 +45,28 @@ const caseStudies = [
     niche: "Personal Brand / Fitness",
     result: "218K+ followers",
     desc: "Built a massive following through strategic content and positioning.",
+    detail: "684 posts",
   },
   {
     name: "IFBB PRO Prateek Talukdar",
     niche: "Fitness / IFBB Pro",
     result: "122K+ followers",
     desc: "Scaled from niche athlete to recognized online authority.",
+    detail: "1,485 posts",
   },
   {
     name: "Khati Axomiya Vlog",
     niche: "YouTube / Lifestyle",
     result: "258K+ subscribers",
     desc: "Grew YouTube presence with strategic content planning.",
+    detail: "149 videos",
+  },
+  {
+    name: "Glatian Alva",
+    niche: "YouTube / Creator",
+    result: "24.3K+ subscribers",
+    desc: "Built a growing YouTube channel with consistent content strategy.",
+    detail: "218 videos",
   },
 ];
 
@@ -75,15 +84,18 @@ const testimonials = [
 ];
 
 const whyUs = [
-  { icon: Target, title: "Strategy-First Approach", desc: "Every piece of content is backed by a clear growth strategy." },
+  { icon: Target, title: "Strategy-First Approach", desc: "Not random posting. Every piece of content is backed by a clear growth strategy." },
   { icon: TrendingUp, title: "Real Growth, Not Vanity", desc: "We focus on leads and revenue, not just likes and followers." },
-  { icon: Users, title: "Built for Founders", desc: "Designed specifically for personal brands and modern businesses." },
+  { icon: Zap, title: "Creative + Performance Driven", desc: "We combine creativity with data-driven execution for real results." },
+  { icon: Users, title: "Built for Personal Brands", desc: "Designed specifically for personal brands and modern businesses." },
 ];
+
+const trustedBrands = ["TVS", "YAMAHA", "MY ATHLETE", "CYBKART"];
 
 const Index = () => {
   return (
     <div>
-      {/* HERO — deepest black */}
+      {/* HERO */}
       <section className="relative min-h-screen flex items-center pt-20 bg-surface-sunken overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ShaderAnimation />
@@ -91,21 +103,20 @@ const Index = () => {
         <div className="absolute inset-0 z-[1] bg-background/5" />
         <div className="container-narrow px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
-            <SectionLabel>Content Growth Agency</SectionLabel>
+            <SectionLabel>Results-Driven Digital Marketing Agency</SectionLabel>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-              We turn content into a{" "}
-              <span className="text-primary">predictable growth system</span>{" "}
-              for founders & personal brands.
+              We don't just grow pages.{" "}
+              <span className="text-primary">We build brands.</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-              200M+ views generated | 1M+ followers built across client accounts.
+              We turn your social media into a structured growth system that helps you stand out and scale. 200M+ views generated | 1M+ followers built.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary/90 transition-colors inline-flex items-center justify-center gap-2"
               >
-                Book a Strategy Call <ArrowRight size={18} />
+                Let's Build Your Brand <ArrowRight size={18} />
               </Link>
               <Link
                 to="/contact"
@@ -130,7 +141,7 @@ const Index = () => {
 
       <div className="section-gap" />
 
-      {/* PROBLEM — elevated surface (lighter) */}
+      {/* PROBLEM */}
       <Section className="bg-surface-elevated">
         <SectionLabel>The Problem</SectionLabel>
         <SectionTitle>Sound familiar?</SectionTitle>
@@ -147,11 +158,11 @@ const Index = () => {
       <div className="section-divider" />
       <div className="section-gap" />
 
-      {/* SOLUTION — base background (darker) */}
+      {/* SOLUTION */}
       <Section className="bg-background">
         <SectionLabel>The Solution</SectionLabel>
         <SectionTitle>We don't sell services. We install a <span className="text-primary">growth system</span>.</SectionTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
           {systemSteps.map((step) => (
             <div key={step.num} className="bg-card rounded-xl p-8 border border-border group hover:border-primary/50 transition-colors shadow-lg shadow-black/20">
               <span className="text-primary font-display text-sm font-bold">{step.num}</span>
@@ -165,7 +176,7 @@ const Index = () => {
 
       <div className="section-gap" />
 
-      {/* SERVICES — elevated surface (lighter) */}
+      {/* SERVICES */}
       <Section className="bg-surface-elevated">
         <SectionLabel>What We Offer</SectionLabel>
         <SectionTitle>Three ways to grow with NXS Media</SectionTitle>
@@ -195,11 +206,11 @@ const Index = () => {
       <div className="section-divider" />
       <div className="section-gap" />
 
-      {/* CASE STUDIES — base background (darker) */}
+      {/* CASE STUDIES */}
       <Section className="bg-background">
         <SectionLabel>Results</SectionLabel>
         <SectionTitle>Real clients. Real growth.</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
           {caseStudies.map((cs) => (
             <Link
               to="/case-studies"
@@ -207,9 +218,10 @@ const Index = () => {
               className="bg-card rounded-xl p-8 border border-border hover:border-primary/50 transition-colors group shadow-lg shadow-black/20"
             >
               <span className="text-xs text-primary font-semibold uppercase tracking-wider">{cs.niche}</span>
-              <h3 className="font-display text-xl font-bold text-foreground mt-3 mb-3">{cs.name}</h3>
-              <p className="text-muted-foreground text-sm mb-6">{cs.desc}</p>
+              <h3 className="font-display text-xl font-bold text-foreground mt-3 mb-2">{cs.name}</h3>
+              <p className="text-muted-foreground text-sm mb-4">{cs.desc}</p>
               <div className="font-display text-2xl font-bold text-primary">{cs.result}</div>
+              <div className="text-xs text-muted-foreground mt-1">{cs.detail}</div>
             </Link>
           ))}
         </div>
@@ -217,11 +229,18 @@ const Index = () => {
 
       <div className="section-gap" />
 
-      {/* PROOF — elevated surface (lighter) */}
+      {/* TRUSTED BY */}
       <Section className="bg-surface-elevated text-center">
-        <SectionLabel>Proof</SectionLabel>
-        <SectionTitle className="mx-auto">Numbers don't lie.</SectionTitle>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-14 max-w-3xl mx-auto">
+        <SectionLabel>Trusted By</SectionLabel>
+        <SectionTitle className="mx-auto">Brands & individuals who trust us</SectionTitle>
+        <div className="flex flex-wrap justify-center gap-6 mt-14">
+          {trustedBrands.map((brand) => (
+            <div key={brand} className="bg-background rounded-lg px-8 py-4 border border-border text-muted-foreground font-display font-semibold tracking-wider text-sm">
+              {brand}
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-16 max-w-3xl mx-auto">
           {[
             { v: "200M+", l: "Views Generated" },
             { v: "1M+", l: "Followers Built" },
@@ -236,7 +255,7 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* TESTIMONIALS — LIGHT SECTION for contrast break */}
+      {/* TESTIMONIALS */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 bg-light-section">
         <div className="container-narrow">
           <span className="text-primary text-sm font-semibold uppercase tracking-widest mb-4 block">Testimonials</span>
@@ -264,12 +283,11 @@ const Index = () => {
         </div>
       </section>
 
-
-      {/* WHY CHOOSE US — base background (darker) */}
+      {/* WHY CHOOSE US */}
       <Section className="bg-background">
         <SectionLabel>Why NXS Media</SectionLabel>
-        <SectionTitle>Why founders choose us</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+        <SectionTitle>Because growth without direction is just noise.</SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
           {whyUs.map((w) => (
             <div key={w.title} className="bg-card rounded-xl p-8 border border-border shadow-lg shadow-black/20">
               <w.icon className="text-primary mb-5" size={28} />
@@ -283,13 +301,13 @@ const Index = () => {
       <div className="section-divider" />
       <div className="section-gap" />
 
-      {/* FINAL CTA — elevated surface */}
+      {/* FINAL CTA */}
       <Section className="bg-surface-elevated text-center">
         <SectionTitle className="mx-auto max-w-2xl">
-          Let's build your <span className="text-primary">growth system</span>.
+          Let's <span className="text-primary">build your brand</span>.
         </SectionTitle>
         <p className="text-muted-foreground text-lg mt-6 max-w-xl mx-auto">
-          Stop guessing. Start growing. Book a free strategy call today.
+          Stop guessing. Start growing. We combine strategy, creativity, and execution to turn your social media into a growth engine.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <Link

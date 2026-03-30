@@ -3,28 +3,28 @@ import Section, { SectionLabel, SectionTitle } from "@/components/Section";
 import { ArrowRight, Target, TrendingUp, Users, Zap } from "lucide-react";
 
 const values = [
-  { icon: Target, title: "Strategy First", desc: "Every action is backed by data and a clear growth plan." },
-  { icon: TrendingUp, title: "Results Obsessed", desc: "We measure success by leads and revenue, not vanity metrics." },
-  { icon: Users, title: "Partnership Mindset", desc: "We treat your brand like our own. Your growth is our growth." },
-  { icon: Zap, title: "Speed of Execution", desc: "We move fast. Ideas to execution in days, not weeks." },
+  { icon: Target, title: "Strategy-First Approach", desc: "Not random posting. Every action is backed by data and a clear growth plan." },
+  { icon: TrendingUp, title: "Real Growth, Not Vanity", desc: "We measure success by leads and revenue, not likes and followers." },
+  { icon: Zap, title: "Creative + Performance Driven", desc: "We combine creativity with data-driven execution for real results." },
+  { icon: Users, title: "Built for Personal Brands", desc: "Designed specifically for personal brands and modern businesses." },
 ];
 
 const About = () => {
   return (
     <div className="pt-20">
       <Section>
-        <SectionLabel>About Us</SectionLabel>
+        <SectionLabel>Who We Are</SectionLabel>
         <SectionTitle>We're not a typical <span className="text-primary">agency</span>.</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              NXS Media is a results-driven digital marketing agency helping individuals and brands build a strong, recognizable personal presence online.
+              NXS Media is a results-driven digital marketing agency helping individuals and brands build a strong, recognisable personal presence online.
             </p>
             <p>
               Most people are stuck posting content without direction — no strategy, no consistency, no results. At NXS Media, we turn your social media into a structured growth system that helps you stand out and scale.
             </p>
             <p>
-              We combine strategy, creativity, and execution to turn your social media into a growth engine — not just a posting platform.
+              We combine strategy, creativity, and execution to turn your social media into a growth engine — not just a posting platform. Anyone can post content. Very few can build authority.
             </p>
           </div>
           <div className="bg-secondary rounded-xl p-8 border border-border">
@@ -48,8 +48,8 @@ const About = () => {
 
       {/* Values */}
       <Section className="bg-secondary">
-        <SectionLabel>Our Values</SectionLabel>
-        <SectionTitle>What drives us</SectionTitle>
+        <SectionLabel>Why Choose NXS Media</SectionLabel>
+        <SectionTitle>Because growth without direction is just noise.</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
           {values.map((v) => (
             <div key={v.title} className="bg-background rounded-xl p-8 border border-border">
@@ -64,7 +64,7 @@ const About = () => {
       {/* Trusted By */}
       <Section>
         <SectionLabel>Trusted By</SectionLabel>
-        <SectionTitle>Brands & individuals we've worked with</SectionTitle>
+        <SectionTitle>Brands & individuals who trust us</SectionTitle>
         <div className="flex flex-wrap gap-6 mt-10">
           {["TVS", "YAMAHA", "MY ATHLETE", "CYBKART"].map((brand) => (
             <div key={brand} className="bg-secondary rounded-lg px-8 py-4 border border-border text-muted-foreground font-display font-semibold tracking-wider text-sm">
@@ -76,9 +76,9 @@ const About = () => {
 
       {/* CTA */}
       <Section className="bg-secondary text-center">
-        <SectionTitle className="mx-auto max-w-2xl">Ready to work with us?</SectionTitle>
+        <SectionTitle className="mx-auto max-w-2xl">Let's build your brand.</SectionTitle>
         <p className="text-muted-foreground text-lg mt-4 max-w-xl mx-auto">
-          Let's discuss how we can build your growth system.
+          Let's discuss how we can turn your social media into a growth engine.
         </p>
         <Link
           to="/contact"

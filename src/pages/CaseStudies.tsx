@@ -51,6 +51,22 @@ const caseStudies = [
       "Became the top Assamese vlogger in Dubai",
     ],
   },
+  {
+    name: "Glatian Alva",
+    niche: "YouTube / Creator",
+    followers: "24.3K+",
+    videos: "218",
+    background: "YouTube creator looking to grow a consistent audience and build a recognizable channel.",
+    problem: "Low subscriber growth, inconsistent upload schedule, content not optimized for discovery.",
+    strategy: "Developed a content calendar, optimized video SEO, created engaging thumbnails and titles for higher click-through rates.",
+    execution: "Consistent uploads with optimized metadata, community engagement, strategic content planning.",
+    results: [
+      "Grew to 24.3K+ subscribers",
+      "218 videos published",
+      "Improved video discoverability",
+      "Built a loyal and engaged audience",
+    ],
+  },
 ];
 
 const CaseStudies = () => {
