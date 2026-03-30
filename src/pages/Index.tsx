@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
+import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { ArrowRight, Target, Video, BarChart3, Zap, TrendingUp, Users, Eye, AlertTriangle, CheckCircle2, Quote } from "lucide-react";
 
 const stats = [
@@ -83,8 +84,10 @@ const Index = () => {
   return (
     <div>
       {/* HERO — deepest black */}
-      <section className="min-h-screen flex items-center pt-20 bg-surface-sunken">
-        <div className="container-narrow px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen flex items-center pt-20 bg-surface-sunken overflow-hidden">
+        <ShaderAnimation />
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="container-narrow px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <SectionLabel>Content Growth Agency</SectionLabel>
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
