@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
+import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { ArrowRight, Target, Video, BarChart3, Zap, TrendingUp, Users, Eye, AlertTriangle, CheckCircle2, Quote } from "lucide-react";
 
 const stats = [
