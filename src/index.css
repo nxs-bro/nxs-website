@@ -44,6 +44,12 @@
     --sidebar-accent-foreground: 0 0% 90%;
     --sidebar-border: 0 0% 18%;
     --sidebar-ring: 18 100% 55%;
+
+    --surface-elevated: 0 0% 8%;
+    --surface-sunken: 0 0% 6%;
+    --light-section: 30 10% 95%;
+    --light-section-foreground: 0 0% 8%;
+    --light-section-muted: 0 0% 40%;
   }
 }
 
