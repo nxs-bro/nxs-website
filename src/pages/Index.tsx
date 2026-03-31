@@ -247,23 +247,14 @@ const Index = () => {
       <Section className="bg-surface-elevated text-center">
         <SectionLabel>Trusted By</SectionLabel>
         <SectionTitle className="mx-auto">Brands & individuals who trust us</SectionTitle>
-        <div className="flex flex-wrap justify-center gap-6 mt-14">
+        <div className="flex flex-wrap justify-center items-center gap-10 mt-14">
           {trustedBrands.map((brand) => (
-            <div key={brand} className="glass-card px-8 py-4 text-muted-foreground font-display font-semibold tracking-wider text-sm">
-              {brand}
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-16 max-w-3xl mx-auto">
-          {[
-            { v: "200M+", l: "Views Generated" },
-            { v: "1M+", l: "Followers Built" },
-            { v: "50+", l: "Brands Scaled" },
-            { v: "3+", l: "Years Experience" },
-          ].map((s) => (
-            <div key={s.l}>
-              <div className="font-display text-4xl sm:text-5xl font-bold text-primary">{s.v}</div>
-              <div className="text-muted-foreground text-sm mt-3">{s.l}</div>
+            <div key={brand.name} className="flex items-center justify-center h-16 w-36">
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="max-h-full max-w-full object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>
