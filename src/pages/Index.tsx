@@ -11,7 +11,7 @@ const stats = [
 
 const painPoints = [
   { icon: AlertTriangle, text: "Posting content without direction — no strategy, no consistency" },
-  { icon: Eye, text: "Getting views but no leads, no revenue, no growth" },
+  { icon: Eye, text: "Getting views but no leads or sales." },
   { icon: Target, text: "Posting content but not seeing real results" },
 ];
 
