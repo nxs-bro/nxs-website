@@ -9,7 +9,6 @@ const services = [
     desc: "Clear roadmap for consistent growth. AI-powered content production, engaging video editing, and graphic design — all designed to position you as an authority and turn attention into leads and opportunities.",
     features: [
       "Custom growth strategy & content roadmap",
-      "AI-powered content ideation & scripting",
       "Professional video editing & post-production",
       "Graphic design for social media",
       "Authority positioning & expert branding",
