@@ -253,7 +253,7 @@ const Index = () => {
               <img
                 src={brand.logo}
                 alt={brand.name}
-                className="max-h-full max-w-full object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           ))}
