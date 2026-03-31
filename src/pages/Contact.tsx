@@ -114,22 +114,6 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Monthly Revenue Range</label>
-              <select
-                name="revenue"
-                value={form.revenue}
-                onChange={handleChange}
-                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
-              >
-                <option value="">Select...</option>
-                <option value="0-10k">₹0 – ₹10K</option>
-                <option value="10k-50k">₹10K – ₹50K</option>
-                <option value="50k-2l">₹50K – ₹2L</option>
-                <option value="2l-10l">₹2L – ₹10L</option>
-                <option value="10l+">₹10L+</option>
-              </select>
-            </div>
-            <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Main Challenge *</label>
               <textarea
                 name="challenge"
