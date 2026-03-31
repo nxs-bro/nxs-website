@@ -9,6 +9,7 @@ import myathleteLogo from "@/assets/brands/myathlete.png";
 import naturalNagasLogo from "@/assets/brands/natural-nagas.png";
 import mysorePalaceLogo from "@/assets/brands/mysore-palace.png";
 import totalcorefitLogo from "@/assets/brands/totalcorefit.png";
+import nfdcLogo from "@/assets/brands/nfdc.png";
 
 const stats = [
   { value: "200M+", label: "Views Generated" },
@@ -105,6 +106,7 @@ const trustedBrands = [
   { name: "Natural Nagas", logo: naturalNagasLogo },
   { name: "Mysore Palace", logo: mysorePalaceLogo },
   { name: "Total Core Fit", logo: totalcorefitLogo },
+  { name: "NFDC", logo: nfdcLogo },
 ];
 
 const Index = () => {

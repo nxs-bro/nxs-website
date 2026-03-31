@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
 import { ArrowRight, Target, TrendingUp, Users, Zap } from "lucide-react";
+import cybkartLogo from "@/assets/brands/cybkart.png";
+import tvsLogo from "@/assets/brands/tvs.png";
+import yamahaLogo from "@/assets/brands/yamaha.webp";
+import myathleteLogo from "@/assets/brands/myathlete.png";
+import naturalNagasLogo from "@/assets/brands/natural-nagas.png";
+import mysorePalaceLogo from "@/assets/brands/mysore-palace.png";
+import totalcorefitLogo from "@/assets/brands/totalcorefit.png";
+import nfdcLogo from "@/assets/brands/nfdc.png";
 
 const values = [
   { icon: Target, title: "Strategy-First Approach", desc: "Not random posting. Every action is backed by data and a clear growth plan." },
@@ -65,10 +73,23 @@ const About = () => {
       <Section>
         <SectionLabel>Trusted By</SectionLabel>
         <SectionTitle>Brands & individuals who trust us</SectionTitle>
-        <div className="flex flex-wrap gap-6 mt-10">
-          {["TVS", "YAMAHA", "MY ATHLETE", "CYBKART"].map((brand) => (
-            <div key={brand} className="bg-secondary rounded-lg px-8 py-4 border border-border text-muted-foreground font-display font-semibold tracking-wider text-sm">
-              {brand}
+        <div className="flex flex-wrap justify-center items-center gap-10 mt-14">
+          {[
+            { name: "TVS", logo: tvsLogo },
+            { name: "Yamaha", logo: yamahaLogo },
+            { name: "My Athlete", logo: myathleteLogo },
+            { name: "Cybkart", logo: cybkartLogo },
+            { name: "Natural Nagas", logo: naturalNagasLogo },
+            { name: "Mysore Palace", logo: mysorePalaceLogo },
+            { name: "Total Core Fit", logo: totalcorefitLogo },
+            { name: "NFDC", logo: nfdcLogo },
+          ].map((brand) => (
+            <div key={brand.name} className="flex items-center justify-center h-16 w-36">
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>
