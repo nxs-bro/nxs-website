@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
 import { ArrowRight, Target, TrendingUp, Users, Zap } from "lucide-react";
+import cybkartLogo from "@/assets/brands/cybkart.png";
+import tvsLogo from "@/assets/brands/tvs.png";
+import yamahaLogo from "@/assets/brands/yamaha.webp";
+import myathleteLogo from "@/assets/brands/myathlete.png";
+import naturalNagasLogo from "@/assets/brands/natural-nagas.png";
+import mysorePalaceLogo from "@/assets/brands/mysore-palace.png";
+import totalcorefitLogo from "@/assets/brands/totalcorefit.png";
+import nfdcLogo from "@/assets/brands/nfdc.png";
 
 const values = [
   { icon: Target, title: "Strategy-First Approach", desc: "Not random posting. Every action is backed by data and a clear growth plan." },
