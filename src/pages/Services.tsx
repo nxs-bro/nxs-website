@@ -53,7 +53,7 @@ const Services = () => {
       {/* Hero */}
       <Section>
         <SectionLabel>Our Services</SectionLabel>
-        <SectionTitle>We don't just grow pages.<br />We <span className="text-primary">build brands</span>.</SectionTitle>
+        <SectionTitle>We don't just grow pages.<br />We <span className="text-primary">social identity</span>.</SectionTitle>
         <p className="text-muted-foreground text-lg mt-6 max-w-2xl leading-relaxed">
           Anyone can post content. Very few can build authority. We combine strategy, creativity, and execution to turn your social media into a growth engine.
         </p>
