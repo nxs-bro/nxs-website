@@ -73,10 +73,23 @@ const About = () => {
       <Section>
         <SectionLabel>Trusted By</SectionLabel>
         <SectionTitle>Brands & individuals who trust us</SectionTitle>
-        <div className="flex flex-wrap gap-6 mt-10">
-          {["TVS", "YAMAHA", "MY ATHLETE", "CYBKART"].map((brand) => (
-            <div key={brand} className="bg-secondary rounded-lg px-8 py-4 border border-border text-muted-foreground font-display font-semibold tracking-wider text-sm">
-              {brand}
+        <div className="flex flex-wrap justify-center items-center gap-10 mt-14">
+          {[
+            { name: "TVS", logo: tvsLogo },
+            { name: "Yamaha", logo: yamahaLogo },
+            { name: "My Athlete", logo: myathleteLogo },
+            { name: "Cybkart", logo: cybkartLogo },
+            { name: "Natural Nagas", logo: naturalNagasLogo },
+            { name: "Mysore Palace", logo: mysorePalaceLogo },
+            { name: "Total Core Fit", logo: totalcorefitLogo },
+            { name: "NFDC", logo: nfdcLogo },
+          ].map((brand) => (
+            <div key={brand.name} className="flex items-center justify-center h-16 w-36">
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>

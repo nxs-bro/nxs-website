@@ -106,6 +106,7 @@ const trustedBrands = [
   { name: "Natural Nagas", logo: naturalNagasLogo },
   { name: "Mysore Palace", logo: mysorePalaceLogo },
   { name: "Total Core Fit", logo: totalcorefitLogo },
+  { name: "NFDC", logo: nfdcLogo },
 ];
 
 const Index = () => {
