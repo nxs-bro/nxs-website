@@ -97,7 +97,7 @@ const About = () => {
 
       {/* CTA */}
       <Section className="bg-secondary text-center">
-        <SectionTitle className="mx-auto max-w-2xl">Let's build your brand.</SectionTitle>
+        <SectionTitle className="mx-auto max-w-2xl">Let's build your social identity.</SectionTitle>
         <p className="text-muted-foreground text-lg mt-4 max-w-xl mx-auto">
           Let's discuss how we can turn your social media into a growth engine.
         </p>

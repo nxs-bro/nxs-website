@@ -311,7 +311,7 @@ const Index = () => {
       {/* FINAL CTA */}
       <Section className="bg-surface-elevated text-center">
         <SectionTitle className="mx-auto max-w-2xl">
-          Let's <span className="text-primary">your social identity</span>.
+          Let's build <span className="text-primary">your social identity</span>.
         </SectionTitle>
         <p className="text-muted-foreground text-lg mt-6 max-w-xl mx-auto">
           Stop guessing. Start growing. We combine strategy, creativity, and execution to turn your social media into a growth engine.
