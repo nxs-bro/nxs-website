@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
-        <Navbar />
+        <ScrollToTop />
         <main>
           <Routes>
             <Route path="/" element={<Index />} />
