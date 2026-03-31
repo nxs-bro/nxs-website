@@ -2,6 +2,13 @@ import { Link } from "react-router-dom";
 import Section, { SectionLabel, SectionTitle } from "@/components/Section";
 import { ShaderAnimation } from "@/components/ui/shader-animation";
 import { ArrowRight, Target, Video, BarChart3, Zap, TrendingUp, Users, Eye, AlertTriangle, CheckCircle2, Quote } from "lucide-react";
+import cybkartLogo from "@/assets/brands/cybkart.png";
+import tvsLogo from "@/assets/brands/tvs.png";
+import yamahaLogo from "@/assets/brands/yamaha.webp";
+import myathleteLogo from "@/assets/brands/myathlete.png";
+import naturalNagasLogo from "@/assets/brands/natural-nagas.png";
+import mysorePalaceLogo from "@/assets/brands/mysore-palace.png";
+import totalcorefitLogo from "@/assets/brands/totalcorefit.png";
 
 const stats = [
   { value: "200M+", label: "Views Generated" },
