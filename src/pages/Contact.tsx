@@ -8,7 +8,6 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     businessType: "",
-    revenue: "",
     challenge: "",
     budget: "",
     email: "",
@@ -32,7 +31,7 @@ const Contact = () => {
     try {
       await new Promise((r) => setTimeout(r, 1000));
       toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-      setForm({ name: "", businessType: "", revenue: "", challenge: "", budget: "", email: "" });
+      setForm({ name: "", businessType: "", challenge: "", budget: "", email: "" });
     } catch {
       toast({ title: "Something went wrong", description: "Please try WhatsApp instead.", variant: "destructive" });
     } finally {
@@ -103,37 +102,15 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Business Type</label>
-              <select
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Your Business Niche</label>
+              <input
                 name="businessType"
                 value={form.businessType}
                 onChange={handleChange}
-                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
-              >
-                <option value="">Select...</option>
-                <option value="personal-brand">Personal Brand</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="saas">SaaS</option>
-                <option value="coaching">Coaching / Consulting</option>
-                <option value="agency">Agency</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Monthly Revenue Range</label>
-              <select
-                name="revenue"
-                value={form.revenue}
-                onChange={handleChange}
-                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
-              >
-                <option value="">Select...</option>
-                <option value="0-10k">₹0 – ₹10K</option>
-                <option value="10k-50k">₹10K – ₹50K</option>
-                <option value="50k-2l">₹50K – ₹2L</option>
-                <option value="2l-10l">₹2L – ₹10L</option>
-                <option value="10l+">₹10L+</option>
-              </select>
+                placeholder="e.g. Fitness, Real Estate, Fashion..."
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
+                maxLength={100}
+              />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Main Challenge *</label>

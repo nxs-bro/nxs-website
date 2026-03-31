@@ -310,12 +310,12 @@ const Index = () => {
           Stop guessing. Start growing. We combine strategy, creativity, and execution to turn your social media into a growth engine.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <Link
-            to="/contact"
+          <a
+            href="tel:+916001745159"
             className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center justify-center gap-2"
           >
             Book a Call <ArrowRight size={18} />
-          </Link>
+          </a>
           <a
             href="https://wa.me/916001745159?text=Hi%20NXS%20Media%2C%20I%27m%20interested%20in%20your%20services"
             target="_blank"

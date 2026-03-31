@@ -37,12 +37,12 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href="tel:+916001745159"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold cta-glow"
           >
             Book a Call
-          </Link>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -67,13 +67,13 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="tel:+916001745159"
               onClick={() => setOpen(false)}
               className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold text-center hover:bg-primary/90 transition-colors mt-2"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       )}
