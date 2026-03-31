@@ -82,47 +82,27 @@ const CaseStudies = () => {
 
       {caseStudies.map((cs, i) => (
         <Section key={cs.name} className={i % 2 === 0 ? "bg-secondary" : ""}>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Header */}
-            <div className="lg:col-span-3 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-8 border-b border-white/[0.08]">
-              <div>
-                <span className="text-primary text-sm font-semibold uppercase tracking-widest">{cs.niche}</span>
-                <h3 className="font-display text-3xl sm:text-4xl font-bold text-foreground mt-2">{cs.name}</h3>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="text-primary" size={20} />
-                <span className="font-display text-3xl font-bold text-primary">{cs.followers}</span>
-                <span className="text-muted-foreground text-sm">followers</span>
-              </div>
-            </div>
-
-            {/* Content */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-8 border-b border-white/[0.08]">
             <div>
-              <h4 className="font-display font-semibold text-foreground mb-3">Background</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">{cs.background}</p>
-
-              <h4 className="font-display font-semibold text-foreground mb-3 mt-6">The Problem</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">{cs.problem}</p>
+              <span className="text-primary text-sm font-semibold uppercase tracking-widest">{cs.niche}</span>
+              <h3 className="font-display text-3xl sm:text-4xl font-bold text-foreground mt-2">{cs.name}</h3>
             </div>
-
-            <div>
-              <h4 className="font-display font-semibold text-foreground mb-3">Strategy</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">{cs.strategy}</p>
-
-              <h4 className="font-display font-semibold text-foreground mb-3 mt-6">Execution</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">{cs.execution}</p>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="text-primary" size={20} />
+              <span className="font-display text-3xl font-bold text-primary">{cs.followers}</span>
+              <span className="text-muted-foreground text-sm">followers</span>
             </div>
+          </div>
 
-            <div className="glass-card p-6">
-              <h4 className="font-display font-semibold text-foreground mb-4">Results</h4>
-              <div className="space-y-3">
-                {cs.results.map((r) => (
-                  <div key={r} className="flex items-start gap-2 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                    <span className="text-foreground">{r}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="glass-card p-6 mt-8">
+            <h4 className="font-display font-semibold text-foreground mb-4">Results</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {cs.results.map((r) => (
+                <div key={r} className="flex items-start gap-2 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+                  <span className="text-foreground">{r}</span>
+                </div>
+              ))}
             </div>
           </div>
         </Section>
