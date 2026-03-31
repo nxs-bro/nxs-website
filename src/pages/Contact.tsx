@@ -31,7 +31,7 @@ const Contact = () => {
     try {
       await new Promise((r) => setTimeout(r, 1000));
       toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
-      setForm({ name: "", businessType: "", revenue: "", challenge: "", budget: "", email: "" });
+      setForm({ name: "", businessType: "", challenge: "", budget: "", email: "" });
     } catch {
       toast({ title: "Something went wrong", description: "Please try WhatsApp instead.", variant: "destructive" });
     } finally {
