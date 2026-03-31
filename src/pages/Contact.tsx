@@ -103,21 +103,15 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Business Type</label>
-              <select
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Your Business Niche</label>
+              <input
                 name="businessType"
                 value={form.businessType}
                 onChange={handleChange}
-                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
-              >
-                <option value="">Select...</option>
-                <option value="personal-brand">Personal Brand</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="saas">SaaS</option>
-                <option value="coaching">Coaching / Consulting</option>
-                <option value="agency">Agency</option>
-                <option value="other">Other</option>
-              </select>
+                placeholder="e.g. Fitness, Real Estate, Fashion..."
+                className="w-full bg-background/50 border border-white/[0.08] rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors duration-300"
+                maxLength={100}
+              />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Monthly Revenue Range</label>
