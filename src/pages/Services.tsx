@@ -100,7 +100,7 @@ const Services = () => {
       {/* CTA */}
       <Section className="text-center bg-secondary">
         <SectionTitle className="mx-auto max-w-2xl">
-          Not sure which package is right for you?
+          Ready to stand out online? Let’s build your social identity.
         </SectionTitle>
         <p className="text-muted-foreground text-lg mt-4 max-w-xl mx-auto">
           Book a free strategy call and we'll recommend the best path forward.
