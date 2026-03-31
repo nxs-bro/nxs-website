@@ -133,7 +133,7 @@ const Index = () => {
                 to="/contact"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center justify-center gap-2"
               >
-                Let's Build Your Brand <ArrowRight size={18} />
+                Let's Build Your Social Identity <ArrowRight size={18} />
               </Link>
               <Link
                 to="/contact"
