@@ -8,7 +8,6 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     businessType: "",
-    revenue: "",
     challenge: "",
     budget: "",
     email: "",
