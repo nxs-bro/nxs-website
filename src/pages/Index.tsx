@@ -133,7 +133,7 @@ const Index = () => {
                 to="/contact"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold cta-glow inline-flex items-center justify-center gap-2"
               >
-                Let's Build Your Brand <ArrowRight size={18} />
+                Let's Build Your Social Identity <ArrowRight size={18} />
               </Link>
               <Link
                 to="/contact"
@@ -311,7 +311,7 @@ const Index = () => {
       {/* FINAL CTA */}
       <Section className="bg-surface-elevated text-center">
         <SectionTitle className="mx-auto max-w-2xl">
-          Let's <span className="text-primary">your social identity</span>.
+          Let's build <span className="text-primary">your social identity</span>.
         </SectionTitle>
         <p className="text-muted-foreground text-lg mt-6 max-w-xl mx-auto">
           Stop guessing. Start growing. We combine strategy, creativity, and execution to turn your social media into a growth engine.
