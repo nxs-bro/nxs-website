@@ -97,7 +97,15 @@ const whyUs = [
   { icon: Users, title: "Built for Personal Brands", desc: "Designed specifically for personal brands and modern businesses." },
 ];
 
-const trustedBrands = ["TVS", "YAMAHA", "MY ATHLETE", "CYBKART"];
+const trustedBrands = [
+  { name: "TVS", logo: tvsLogo },
+  { name: "Yamaha", logo: yamahaLogo },
+  { name: "My Athlete", logo: myathleteLogo },
+  { name: "Cybkart", logo: cybkartLogo },
+  { name: "Natural Nagas", logo: naturalNagasLogo },
+  { name: "Mysore Palace", logo: mysorePalaceLogo },
+  { name: "Total Core Fit", logo: totalcorefitLogo },
+];
 
 const Index = () => {
   return (
