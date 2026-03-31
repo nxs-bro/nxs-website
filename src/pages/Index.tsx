@@ -178,8 +178,7 @@ const Index = () => {
 
       {/* SERVICES */}
       <Section className="bg-surface-elevated">
-        <SectionLabel>What We Offer</SectionLabel>
-        <SectionTitle>Three ways to grow with NXS Media</SectionTitle>
+        <SectionTitle>What We Offer</SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-14">
           {services.map((s) => (
             <div key={s.title} className="glass-card p-8 flex flex-col group">
